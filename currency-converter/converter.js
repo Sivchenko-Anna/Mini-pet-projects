@@ -4,7 +4,7 @@ const RATES = {
   THB: 0.45,
 };
 
-function convert(RUB, currency) {
+function convert({RUB, currency}) {
   if(!RATES[currency]) {
     return null;
   }

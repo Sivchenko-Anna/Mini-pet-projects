@@ -5,7 +5,7 @@ const OPERATIONS = {
   division: '/'
 };
 
-function calculator ({a, b, operation}) {
+function calculate ({ a, b, operation }) {
   let result = null;
 
   switch (operation) {
@@ -25,6 +25,9 @@ function calculator ({a, b, operation}) {
       result = division(a, b);
       break;
 
-    default: break;
+    default:
+      break;
   }
+
+  return result;
 }

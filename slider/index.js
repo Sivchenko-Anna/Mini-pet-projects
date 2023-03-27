@@ -4,13 +4,32 @@ const slider = document.querySelector(".slider");
 const images = document.querySelectorAll(".image");
 
 let slideNumber = 1;
+const length = images.length;
+
+const nextSlide = () => {
+  slider.style.transform = `translateX(-${slideNumber * 800}px)`;
+    slideNumber++;
+}
+
+const prevSlide = () => {
+  slider.style.transform = `translateX(-${(slideNumber - 2) * 800}px)`;
+    slideNumber--;
+}
+
+const getFirstSlide = () => {
+  slider.style.transform = `translateX(0px)`;
+  slideNumber = 1;
+};
+
+const getLastSlide = () => {
+  slider.style.transform = `translateX(-${(length - 1) * 800}px)`;
+  slideNumber = length;
+};
 
 right.addEventListener("click", () => {
-  if (slideNumber < images.length) {
-    slider.style.transform = `translateX(-${slideNumber * 800}px)`;
-    slideNumber++;
-  } else {
-    slider.style.transform = `translateX(0px)`;
-    slideNumber = 1;
-  }
+  slideNumber < length ? nextSlide() : getFirstSlide();
 });
+
+left.addEventListener("click", () => {
+  slideNumber > 1 ? prevSlide() : getLastSlide();
+})

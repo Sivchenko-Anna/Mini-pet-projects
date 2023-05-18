@@ -1,7 +1,7 @@
 
 # Mini-pet-projects
 
-В данном репозитории собраны небошльшие pet-projects, написанные с использованием HTML, CSS и JavaScript.
+В данном репозитории собраны небольшие pet-projects, написанные с использованием HTML, CSS и JavaScript.
 
 ## Projects
 ### 1. Stopwatch
